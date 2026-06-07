@@ -127,7 +127,14 @@
                     <option value="Desain Standar (Katalog)">Desain Standar (Katalog)</option>
                     <option value="Custom Request Desain Sendiri">Custom Desain (Kirim Foto via WA)</option>
                 </select>
-                <input type="text" id="tulisan-birthday" placeholder="Tulisan kue & Request rasa custom jika ada">
+                <input type="text" id="tulisan-birthday" placeholder="Tulisan kue & Request rasa custom">
+                
+                <select id="kirim-birthday" onchange="toggleAlamat('birthday')">
+                    <option value="Ambil Sendiri ke Toko (Pickup)">Metode: Ambil Sendiri (Pickup)</option>
+                    <option value="Kirim lewat GoSend / GrabExpress">Metode: Kirim via GoSend / Grab</option>
+                </select>
+                <input type="text" id="alamat-birthday" placeholder="Isi alamat lengkap (Jika pilih GoSend)" style="display:none;">
+                
                 <a href="https://instagram.com/username_tokomu" target="_blank" class="catalog-link"><i class="fab fa-instagram"></i> Lihat Katalog Desain di IG</a>
             </div>
 
@@ -150,6 +157,12 @@
                     <option value="Paket Box Isi 6">Porsi: Paket Box Isi 6</option>
                     <option value="Paket Box Isi 12">Porsi: Paket Box Isi 12</option>
                 </select>
+                
+                <select id="kirim-macaron" onchange="toggleAlamat('macaron')">
+                    <option value="Ambil Sendiri ke Toko (Pickup)">Metode: Ambil Sendiri (Pickup)</option>
+                    <option value="Kirim lewat GoSend / GrabExpress">Metode: Kirim via GoSend / Grab</option>
+                </select>
+                <input type="text" id="alamat-macaron" placeholder="Isi alamat lengkap (Jika pilih GoSend)" style="display:none;">
             </div>
 
             <div class="price">Rp. 120.000</div>
@@ -173,6 +186,12 @@
                     <option value="Paket Box Isi 6">Porsi: Paket Box Isi 6</option>
                     <option value="Paket Box Isi 9">Porsi: Paket Box Isi 9</option>
                 </select>
+                
+                <select id="kirim-cupcake" onchange="toggleAlamat('cupcake')">
+                    <option value="Ambil Sendiri ke Toko (Pickup)">Metode: Ambil Sendiri (Pickup)</option>
+                    <option value="Kirim lewat GoSend / GrabExpress">Metode: Kirim via GoSend / Grab</option>
+                </select>
+                <input type="text" id="alamat-cupcake" placeholder="Isi alamat lengkap (Jika pilih GoSend)" style="display:none;">
             </div>
 
             <div class="price">Rp. 100.000</div>
@@ -196,6 +215,12 @@
                     <option value="Paket Box Isi 10 Pcs">Porsi: Paket Box Isi 10 Pcs</option>
                     <option value="Custom Hampers Jar / Toples">Porsi: Toples / Jar Hampers</option>
                 </select>
+                
+                <select id="kirim-cookies" onchange="toggleAlamat('cookies')">
+                    <option value="Ambil Sendiri ke Toko (Pickup)">Metode: Ambil Sendiri (Pickup)</option>
+                    <option value="Kirim lewat GoSend / GrabExpress">Metode: Kirim via GoSend / Grab</option>
+                </select>
+                <input type="text" id="alamat-cookies" placeholder="Isi alamat lengkap (Jika pilih GoSend)" style="display:none;">
             </div>
 
             <div class="price">Rp. 80.000</div>
@@ -217,7 +242,14 @@
                     <option value="Desain Sesuai Foto / Katalog">Desain Sesuai Katalog</option>
                     <option value="Custom Warna & Gambar Minimalis">Custom Warna & Gambar Sendiri</option>
                 </select>
-                <input type="text" id="tulisan-bento" placeholder="Tulisan kue & Request rasa custom jika ada">
+                <input type="text" id="tulisan-bento" placeholder="Tulisan kue & Request rasa custom">
+                
+                <select id="kirim-bento" onchange="toggleAlamat('bento')">
+                    <option value="Ambil Sendiri ke Toko (Pickup)">Metode: Ambil Sendiri (Pickup)</option>
+                    <option value="Kirim lewat GoSend / GrabExpress">Metode: Kirim via GoSend / Grab</option>
+                </select>
+                <input type="text" id="alamat-bento" placeholder="Isi alamat lengkap (Jika pilih GoSend)" style="display:none;">
+                
                 <a href="https://instagram.com/username_tokomu" target="_blank" class="catalog-link"><i class="fab fa-instagram"></i> Lihat Katalog Desain di IG</a>
             </div>
 
@@ -241,6 +273,12 @@
                     <option value="Satu Lusin (Isi 12)">Porsi: Box Satu Lusin (Isi 12)</option>
                     <option value="Custom Donat Tulis (Isi 12)">Porsi: Box Donat Huruf / Tulis</option>
                 </select>
+                
+                <select id="kirim-donut" onchange="toggleAlamat('donut')">
+                    <option value="Ambil Sendiri ke Toko (Pickup)">Metode: Ambil Sendiri (Pickup)</option>
+                    <option value="Kirim lewat GoSend / GrabExpress">Metode: Kirim via GoSend / Grab</option>
+                </select>
+                <input type="text" id="alamat-donut" placeholder="Isi alamat lengkap (Jika pilih GoSend)" style="display:none;">
             </div>
 
             <div class="price">Rp. 130.000</div>
