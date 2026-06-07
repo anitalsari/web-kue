@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bee Bake</title>z
+    <title>Bee Bake</title>
     
     <!--font awessome cdn link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!--link css custom-->
     <link rel="stylesheet" href="css/style.css">
+       <!-- Menghubungkan ke file JavaScript eksternal -->
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -29,17 +31,13 @@
         </nav>
 
         <div class="icon">
-            <a href="#" class="fas fa-heart"></a>
-             <a href="#" class="fas fa-shopping-cart"></a>
-              <a href="#" class="fas fa-user"></a>
+            <a href="https://wa.me/6281234567890" target="_blank" class="fab fa-whatsapp"></a>
         </div>
     </header>
     <!--header section end-->
     
 
     <!-- home section starts-->
-
-
     <section class="home" id="home">
 
         <div class="content">
@@ -48,13 +46,12 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ea ad veniam est nostrud incididunt dolorem quasi doloremque do.
             Omnis laboris architecto adipiscing dolor omnis error dolorem enim duis nisi laboris laborum proident quisquam. 
             Unde non aut laboris consequuntur sed et irure. </p>
-            <a href="#" class="btn">shop now</a>
+            <a href="#products" class="btn">shop now</a>
         </div>
 
     </section>
    
     <!--about section starts-->
-
     <section class="about" id="about">
     <h1 class="heading"><span>about</span> us</h1>
     <div class="row">
@@ -106,10 +103,11 @@
                 <span>Perfect for any occasion</span>
             </div>
         </div>
-        <!--section icons  ends-->
+    </section>
+    <!--section icons  ends-->
 
-        <!--products section starts-->
-    <section class="products" id="products">
+    <!--products section starts-->
+   <section class="products" id="products">
     <h1 class="heading"><span>our</span> products</h1>
     
     <div class="box-container">
@@ -117,58 +115,149 @@
         <div class="box">
             <img src="gambar/birthday.jpg" alt="">
             <h3>Birthday Cake</h3>
+            
+            <div class="product-options">
+                <select id="rasa-birthday">
+                    <option value="Double Chocolate">Rasa: Double Chocolate</option>
+                    <option value="Red Velvet">Rasa: Red Velvet</option>
+                    <option value="Strawberry Vanilla">Rasa: Strawberry Vanilla</option>
+                    <option value="Custom Rasa Sendiri (Bicarakan di WA)">Rasa: Custom Rasa Sendiri ✨</option>
+                </select>
+                <select id="custom-birthday">
+                    <option value="Desain Standar (Katalog)">Desain Standar (Katalog)</option>
+                    <option value="Custom Request Desain Sendiri">Custom Desain (Kirim Foto via WA)</option>
+                </select>
+                <input type="text" id="tulisan-birthday" placeholder="Tulisan kue & Request rasa custom jika ada">
+                <a href="https://instagram.com/username_tokomu" target="_blank" class="catalog-link"><i class="fab fa-instagram"></i> Lihat Katalog Desain di IG</a>
+            </div>
+
             <div class="price">Rp. 125.000</div>
-            <a href="#" class="btn">add to cart</a>
+            <button onclick="pesanBirthday()" class="btn"><i class="fab fa-whatsapp"></i> Pesan via WA</button>
         </div>
 
         <div class="box">
             <img src="gambar/macaron.jpg" alt="">
             <h3>Macaron</h3>
+            
+            <div class="product-options">
+                <select id="rasa-macaron">
+                    <option value="Mix Semua Rasa">Rasa: Mix Semua Rasa</option>
+                    <option value="Full Chocolate & Vanilla">Rasa: Cokelat & Vanila</option>
+                    <option value="Full Strawberry & Matcha">Rasa: Stroberi & Matcha</option>
+                    <option value="Custom Pilihan Rasa Sendiri">Rasa: Custom Rasa Sendiri ✨</option>
+                </select>
+                <select id="porsi-macaron">
+                    <option value="Paket Box Isi 6">Porsi: Paket Box Isi 6</option>
+                    <option value="Paket Box Isi 12">Porsi: Paket Box Isi 12</option>
+                </select>
+            </div>
+
             <div class="price">Rp. 120.000</div>
-            <a href="#" class="btn">add to cart</a>
+            <button onclick="pesanMacaron()" class="btn"><i class="fab fa-whatsapp"></i> Pesan via WA</button>
         </div>
 
         <div class="box">
             <img src="gambar/cupcake.jpg" alt="">
             <h3>Cupcake</h3>
+            
+            <div class="product-options">
+                <select id="rasa-cupcake">
+                    <option value="Chocolate Fudge">Rasa: Chocolate Fudge</option>
+                    <option value="Vanilla Sprinkle">Rasa: Vanilla Sprinkle</option>
+                    <option value="Matcha Green Tea">Rasa: Matcha Green Tea</option>
+                    <option value="Red Velvet Cream Cheese">Rasa: Red Velvet Cream Cheese</option>
+                    <option value="Custom Request Rasa Sendiri">Rasa: Custom Rasa Sendiri ✨</option>
+                </select>
+                <select id="porsi-cupcake">
+                    <option value="Paket Box Isi 4">Porsi: Paket Box Isi 4</option>
+                    <option value="Paket Box Isi 6">Porsi: Paket Box Isi 6</option>
+                    <option value="Paket Box Isi 9">Porsi: Paket Box Isi 9</option>
+                </select>
+            </div>
+
             <div class="price">Rp. 100.000</div>
-            <a href="#" class="btn">add to cart</a>
+            <button onclick="pesanCupcake()" class="btn"><i class="fab fa-whatsapp"></i> Pesan via WA</button>
         </div>
 
         <div class="box">
             <img src="gambar/coockie.jpg" alt="">
             <h3>Cookies</h3>
+            
+            <div class="product-options">
+                <select id="rasa-cookies">
+                    <option value="Choco Chip Classic">Rasa: Choco Chip Classic</option>
+                    <option value="Almond Butter">Rasa: Almond Butter</option>
+                    <option value="Double Chocolate">Rasa: Double Chocolate</option>
+                    <option value="Matcha White Choco">Rasa: Matcha White Choco</option>
+                    <option value="Custom Mix Rasa Sendiri">Rasa: Custom Rasa Sendiri ✨</option>
+                </select>
+                <select id="porsi-cookies">
+                    <option value="Paket Box Isi 5 Pcs">Porsi: Paket Box Isi 5 Pcs</option>
+                    <option value="Paket Box Isi 10 Pcs">Porsi: Paket Box Isi 10 Pcs</option>
+                    <option value="Custom Hampers Jar / Toples">Porsi: Toples / Jar Hampers</option>
+                </select>
+            </div>
+
             <div class="price">Rp. 80.000</div>
-            <a href="#" class="btn">add to cart</a>
+            <button onclick="pesanCookies()" class="btn"><i class="fab fa-whatsapp"></i> Pesan via WA</button>
         </div>
 
         <div class="box">
             <img src="gambar/bentocake.jpg" alt="">
             <h3>Bento Cake</h3>
+            
+            <div class="product-options">
+                <select id="rasa-bento">
+                    <option value="Choco Melt">Rasa: Choco Melt</option>
+                    <option value="Korean Vanilla">Rasa: Korean Vanilla</option>
+                    <option value="Red Velvet Berry">Rasa: Red Velvet Berry</option>
+                    <option value="Custom Base Rasa Sendiri">Rasa: Custom Rasa Sendiri ✨</option>
+                </select>
+                <select id="custom-bento">
+                    <option value="Desain Sesuai Foto / Katalog">Desain Sesuai Katalog</option>
+                    <option value="Custom Warna & Gambar Minimalis">Custom Warna & Gambar Sendiri</option>
+                </select>
+                <input type="text" id="tulisan-bento" placeholder="Tulisan kue & Request rasa custom jika ada">
+                <a href="https://instagram.com/username_tokomu" target="_blank" class="catalog-link"><i class="fab fa-instagram"></i> Lihat Katalog Desain di IG</a>
+            </div>
+
             <div class="price">Rp. 90.000</div>
-            <a href="#" class="btn">add to cart</a>
+            <button onclick="pesanBento()" class="btn"><i class="fab fa-whatsapp"></i> Pesan via WA</button>
         </div>
 
         <div class="box">
             <img src="gambar/donat.jpg" alt="">
             <h3>Donut</h3>
+            
+            <div class="product-options">
+                <select id="rasa-donut">
+                    <option value="Mix Toping Classic">Toping: Mix (Cokelat, Keju, Kacang)</option>
+                    <option value="Full Sugar Glazed">Toping: Full Sugar Glazed</option>
+                    <option value="Full Chocolate Almond">Toping: Full Chocolate Almond</option>
+                    <option value="Custom Request Toping Sendiri">Toping: Custom Rasa/Toping ✨</option>
+                </select>
+                <select id="porsi-donut">
+                    <option value="Setengah Lusin (Isi 6)">Porsi: Box Setengah Lusin (Isi 6)</option>
+                    <option value="Satu Lusin (Isi 12)">Porsi: Box Satu Lusin (Isi 12)</option>
+                    <option value="Custom Donat Tulis (Isi 12)">Porsi: Box Donat Huruf / Tulis</option>
+                </select>
+            </div>
+
             <div class="price">Rp. 130.000</div>
-            <a href="#" class="btn">add to cart</a>
+            <button onclick="pesanDonut()" class="btn"><i class="fab fa-whatsapp"></i> Pesan via WA</button>
         </div>
 
     </div>
 </section>
-        <!--products section ends-->
+<!--products section ends-->
 
-        <!--review section starts-->
-  <!--review section starts-->
+    <!--review section starts-->
 <section class="review" id="review">
 
     <h1 class="heading"><span>customer</span> review</h1>   
 
     <div class="box-container">
 
-        <!-- Kartu Review 1 -->
         <div class="box">
             <div class="stars">
                 <i class="fas fa-star"></i>
@@ -188,7 +277,6 @@
             <span class="fas fa-quote-right"></span>
         </div>
 
-        <!-- Kartu Review 2 -->
         <div class="box">
             <div class="stars">
                 <i class="fas fa-star"></i>
@@ -208,7 +296,6 @@
             <span class="fas fa-quote-right"></span>
         </div>
 
-        <!-- Kartu Review 3 -->
         <div class="box">
             <div class="stars">
                 <i class="fas fa-star"></i>
@@ -248,30 +335,31 @@
             <span class="fas fa-quote-right"></span>
         </div>
     </div> 
-</div> 
 </section>
 <!--review section ends-->
 
 <!--contact section starts-->
-
 <section class="contact" id="contact">
-    <h1 class="heading"> <span>contact</span> us </h1>
+    <h1 class="heading"> <span>our</span> store </h1>
 
     <div class="row">
-        <form action="proses_kontak.php" method="POST">
-            <input type="text" name="nama" placeholder="name" class="box" required>
-            <input type="email" name="email" placeholder="email" class="box" required>
-            <input type="number" name="nomor_hp" placeholder="number" class="box" required>
-            <textarea name="isi_pesan" class="box" placeholder="message" id="" cols="30" rows="10" required></textarea>
-            <input type="submit" name="kirim_pesan" value="send message" class="btn">
-        </form>
+        <!-- Sisi Kiri: Informasi Toko Berfungsi Penuh -->
+        <div class="store-info">
+            <h3><i class="fas fa-store"></i> Bee Bake Kitchen</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Jl. Sukses Bersama No. 123, Kota Batam, Kepulauan Riau</p>
+            <p><i class="fas fa-clock"></i> <strong>Jam Operasional:</strong> 09.00 - 20.00 WIB (Set Hari)</p>
+            <p><i class="fas fa-envelope"></i> hello@beebake.com</p>
+            <a href="https://maps.google.com" target="_blank" class="btn"><i class="fas fa-route"></i> Petunjuk Arah</a>
+        </div>
 
+        <!-- Sisi Kanan: Google Maps Embed (Iframe Peta Lokasi) -->
         <div class="image">
-            <img src="gambar/gambarcontact.png" alt="">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0579344465224!2d104.0484566!3d1.1235456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMDcnMjQuOCJOIDEwNMKwMDInNTQuNCJF!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>
 <!--contact section ends-->
 
+ 
 </body>
 </html>
