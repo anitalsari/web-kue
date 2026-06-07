@@ -473,3 +473,125 @@ header .fa-bars {
     html { font-size: 50%; }
     .heading { font-size: 3rem; }
 }
+
+
+/* =========================================================
+   10. FOOTER
+   ========================================================= */
+
+footer,
+.footer,
+.col-lg-12 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Area Footer */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 3rem 0 1.5rem;
+    margin: 0;
+    background: rgba(255, 51, 153, .05);
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    color: var(--pink);
+
+    border-radius: 50%;
+    font-size: 2.2rem;
+
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+    transition: .3s;
+}
+
+.social-icons li a:hover {
+    background: var(--pink);
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Copyright */
+
+.copyright {
+    background: #333;
+    color: #fff;
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: center;
+    text-transform: none;
+}
+
+.copyright a {
+    color: var(--pink);
+    font-weight: bold;
+    text-transform: none;
+}
+
+.copyright a:hover {
+    color: #fff;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .social-icons{
+        gap: 1.5rem;
+    }
+
+    .social-icons li a{
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 2rem;
+    }
+
+    .copyright{
+        font-size: 1.3rem;
+        padding: 1.5rem;
+    }
+
+}
+
+/* Icon WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #25D366; /* warna hijau WhatsApp */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
